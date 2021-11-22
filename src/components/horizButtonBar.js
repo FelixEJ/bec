@@ -5,36 +5,39 @@ import Donate from "../images/donate_3.png";
 import Membership from "../images/Become-a-member.png";
 
 const Container = styled.div`
-  display: block;
-  max-width: 1000px;
-
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5vh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(200, 200, 200, 0.7);
   margin-bottom: 5vh;
+  margin-top: 2vh;
 `;
 
 const Background = styled.div`
   background: rgba(255, 255, 255, 0.6);
   &:hover {
-      opacity: 1.0;
+    opacity: 1;
   }
 `;
 
 const Icon = styled.img`
-  width: 30%;
-  padding: 10px;
-  opacity: 1.0;
+  width: 30vw;
+  padding: 1vw;
+  opacity: 1;
 `;
 
 const HorizButtonBar = () => {
   return (
     <Container>
-      <Background>
+      {/* <Background> */}
         <Icon src={Join} alt="Join us Icon" />
         <Icon src={Donate} alt="Donate Icon" />
         <Icon src={Membership} alt="Membership Icon" />
-      </Background>
+      {/* </Background> */}
     </Container>
   );
 };

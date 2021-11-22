@@ -7,12 +7,14 @@ import Button from "@material-ui/core/Button";
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
+import styled from "styled-components";
 import { autoPlay } from "react-swipeable-views-utils";
 
 import Slide01 from "../images/slide_1.jpg";
 import Slide02 from "../images/slide_2.jpg";
-import Slide03 from "../images/slider_3.png";
+import Slide03 from "../images/kalang-headwaters.png";
 import Slide04 from "../images/slide_4.jpg";
+import Slide05 from "../images/blueberry_farm.jpg";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -20,29 +22,40 @@ const slides = [
   {
     label: "Bellingen Environment Centre",
     imgPath: Slide01,
+    text: "Dedicated to the conservation of the natural environment since 1990. The BEC was formed in 1989 in response to the growing awareness that to deal with environmental issues, members of the community needed to work through an organisation to achieve the maximum benefit for the environment.",
   },
   {
     label: "The Great Koala National Park",
     imgPath: Slide02,
+    text: "The proposed GKNP on paper covers an area from just north of Kempsey in the south to Woolgoolga in the north. It roughly runs west from the Pacific Highway to as far as a line aligned with the beginning of the Dorrigo Plateau in the east. ",
   },
   {
-    label: "Kalang Headwaters",
+    label: "Friends of Kalang Headwater",
     imgPath: Slide03,
+    text: "In November 2016, residents of the upper Kalang received notice from Forestry Corporation of NSW (FCNSW) of planned logging in compartments 138 to 144 in Oakes and Roses Creek state forests, these compartments are along Kelose Road, with the near pristine Roses Creek on one side and the upper Kalang River on the other side.",
   },
   {
-    label: "Bellingen River Turtles",
+    label: "Darruyay Yilaaming Gumbaynggida jagunda",
     imgPath: Slide04,
+    text: "The BEC is currently working with the Gumbaynggirri people to protect songlines and heritage.",
+  },
+  {
+    label: "The Blueberry Campaign",
+    imgPath: Slide05,
+    text: "The Bellingen Environment Centre started working on the Blueberry Campaign in 2015 when a local Valery resident notified them of their environmental concerns with a 150 acre blueberry farm on the edge of Pine Creek. The resident had exhausted every avenue to try and protect their local environment...",
   },
 ];
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: "60vw",
+    maxWidth: "90vw",
     flexGrow: 1,
     backgroundColor: "none",
     display: "block",
     marginLeft: "auto",
     marginRight: "auto",
+    marginTop: "5vh",
+    marginBottom: "5vh",
   },
   header: {
     display: "flex",
@@ -59,6 +72,18 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "auto",
   },
 }));
+
+const Container = styled.div`
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(200, 200, 200, 0.7);
+`;
 
 function SwipeableTextMobileStepper() {
   const classes = useStyles();
@@ -89,16 +114,19 @@ function SwipeableTextMobileStepper() {
         onChangeIndex={handleStepChange}
         enableMouseEvents
         interval={7000}
-        position= 'top'
+        position="top"
       >
         {slides.map((step, index) => (
           <div key={step.label}>
-            {Math.abs(activeStep - index) <= 5 ? (
-              <img
-                className={classes.img}
-                src={step.imgPath}
-                alt={step.label}
-              />
+            {Math.abs(activeStep - index) <= (slides.length+1) ? (
+              <Container>
+                <img
+                  className={classes.img}
+                  src={step.imgPath}
+                  alt={step.label}
+                />
+                <p>{step.text}</p>
+              </Container>
             ) : null}
           </div>
         ))}

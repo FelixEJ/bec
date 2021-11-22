@@ -4,6 +4,7 @@ import "../App.css";
 import Footer from "../components/footer";
 import SwipeableTextMobileStepper from "../components/slider";
 import HorizButtonBar from "../components/horizButtonBar";
+import Statement from "../components/statement"
 import { Parallax } from "react-parallax";
 import BgImage01 from "../images/one.jpg";
 import BgImage02 from "../images/zero.jpg";
@@ -41,6 +42,7 @@ const Index = () => {
       </Parallax>
       <Parallax bgImage={BgImage02} strength={200}>
         <BackgroundImageBox1Col>
+          <Statement />
           <Footer />
         </BackgroundImageBox1Col>
       </Parallax>

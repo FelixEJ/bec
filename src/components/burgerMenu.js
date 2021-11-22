@@ -2,16 +2,16 @@ import React from "react";
 import { slide as Menu } from "react-burger-menu";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import LogoImage from "../images/BECLogo.svg";
+import LogoImage from "../images/Logo_Text.png";
 
 function BurgerMenu() {
   var styles = {
     bmBurgerButton: {
       position: "fixed",
-      width: "50px",
-      height: "50px",
-      left: "36px",
-      top: "36px",
+      width: "3vh",
+      height: "3vh",
+      left: "3vh",
+      top: "3vh",
     },
     bmBurgerBars: {
       background: "black",
@@ -58,6 +58,23 @@ function BurgerMenu() {
     text-decoration: none;
   `;
 
+  const Logo = styled.img`
+    height: 10vh;
+    max-height: 220px;
+    margin: auto;
+  `;
+
+  const Container = styled.div`
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 12vh;
+  `;
+
   // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
   return (
     <div>
@@ -65,7 +82,6 @@ function BurgerMenu() {
       <Menu
         styles={styles}
         pageWrapId={"page-wrap"}
-        customBurgerIcon={<img src={LogoImage} />}
       >
         <main id="page-wrap">
           <List>
@@ -87,6 +103,9 @@ function BurgerMenu() {
           </List>
         </main>
       </Menu>
+      <Container>
+        <Logo src={LogoImage} alt="" />
+      </Container>
     </div>
   );
 }

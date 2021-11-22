@@ -3,7 +3,7 @@ import styled from "styled-components";
 import FooterImage from "../images/Acknowledge-Background-Image.png";
 
 const Image = styled.img`
-  width: 50vw;
+  width: 95vw;
   max-width: 960px;
   display: block;
 

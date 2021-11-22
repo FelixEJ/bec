@@ -11,7 +11,7 @@ const Routes = () => {
   return (
     <Router>
       <BurgerMenu />
-      <NavBar />
+      {/* <NavBar /> */}
         <Switch>
           <Route exact path="/" component={Index}></Route>
           <Route path="/contactPage" component={Contact}></Route>
