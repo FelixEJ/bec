@@ -8,6 +8,7 @@ import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
 import styled from "styled-components";
+import breakpoints from "./breakpoints";
 import { autoPlay } from "react-swipeable-views-utils";
 
 import Slide01 from "../images/slide_1.jpg";
@@ -67,11 +68,27 @@ const useStyles = makeStyles((theme) => ({
   img: {
     display: "block",
     maxWidth: "95%",
+    maxHeight: "55%",
     overflow: "hidden",
     marginLeft: "auto",
     marginRight: "auto",
   },
 }));
+
+const Root = styled.div`
+  max-width: 90vw;
+  flex-grow: 1;
+  background-color: none;
+  display: block;
+  margin: auto;
+
+  @media only screen and ${breakpoints.device.lg} {
+    max-width: 70vw;
+    float: right;
+    margin-right: 2vw;
+    margin-bottom: 5vh;
+  }
+`;
 
 const Container = styled.div`
   display: -webkit-box;
@@ -83,6 +100,16 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   background-color: rgba(200, 200, 200, 0.7);
+  max-height: 35vh;
+
+  @media only screen and ${breakpoints.device.md} {
+    max-height: 25vh;
+  }
+  @media only screen and ${breakpoints.device.lg} {
+    max-height: 50vh;
+    max-width: 70vw;
+    justify-content: flex-end;
+  }
 `;
 
 function SwipeableTextMobileStepper() {
@@ -104,7 +131,8 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-    <div className={classes.root}>
+    // <div className={classes.root}>
+    <Root>
       <Paper elevation={0} className={classes.header}>
         <Typography>{slides[activeStep].label}</Typography>
       </Paper>
@@ -118,7 +146,7 @@ function SwipeableTextMobileStepper() {
       >
         {slides.map((step, index) => (
           <div key={step.label}>
-            {Math.abs(activeStep - index) <= (slides.length+1) ? (
+            {Math.abs(activeStep - index) <= slides.length + 1 ? (
               <Container>
                 <img
                   className={classes.img}
@@ -161,7 +189,8 @@ function SwipeableTextMobileStepper() {
           </Button>
         }
       />
-    </div>
+    {/* </div> */}
+    </Root>
   );
 }
 

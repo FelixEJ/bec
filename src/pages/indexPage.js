@@ -1,11 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import breakpoints from "../components/breakpoints";
+import { Parallax } from "react-parallax";
 import "../App.css";
+
 import Footer from "../components/footer";
 import SwipeableTextMobileStepper from "../components/slider";
 import HorizButtonBar from "../components/horizButtonBar";
-import Statement from "../components/statement"
-import { Parallax } from "react-parallax";
+import Statement from "../components/statement";
+import NavBar from "../components/navbar";
+
 import BgImage01 from "../images/one.jpg";
 import BgImage02 from "../images/zero.jpg";
 
@@ -24,27 +28,47 @@ const Container = styled.div`
 
   max-width: 100vw;
 `;
-const BackgroundImageBox1Col = styled.div`
+const TopBackgroundImage = styled.div`
   background-color: none;
   margin: 1% 0% 1% 0%;
   column-count: 1;
   column-gap: 1%;
+  margin-top: 5vh;
+  height: 80vh;
+
+  max-height: 500px;
+
+  @media only screen and ${breakpoints.device.md} {
+    max-height: 650px;
+  }
+  @media only screen and ${breakpoints.device.lg} {
+    max-height: 1000px;
+  }
+`;
+
+const BottomBackgroundImage = styled.div`
+  background-color: none;
+  margin: 1% 0% 1% 0%;
+  column-count: 1;
+  column-gap: 1%;
+  margin-top: 5vh;
 `;
 
 const Index = () => {
   return (
     <Container>
+      <NavBar />
       <Parallax bgImage={BgImage01} strength={-200}>
-        <BackgroundImageBox1Col>
+        <TopBackgroundImage>
           <SwipeableTextMobileStepper />
-        </BackgroundImageBox1Col>
-        <HorizButtonBar />
+          <HorizButtonBar />
+        </TopBackgroundImage>
       </Parallax>
       <Parallax bgImage={BgImage02} strength={200}>
-        <BackgroundImageBox1Col>
+        <BottomBackgroundImage>
           <Statement />
           <Footer />
-        </BackgroundImageBox1Col>
+        </BottomBackgroundImage>
       </Parallax>
     </Container>
   );

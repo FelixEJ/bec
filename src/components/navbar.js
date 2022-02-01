@@ -1,20 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import breakpoints from "./breakpoints";
 import {
   Toolbar,
   CssBaseline,
-  Typography,
   makeStyles,
   Menu,
   Button,
   MenuItem,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import LogoImage from "../images/bec-logo-header.png";
 
 const useStyles = makeStyles((theme) => ({
   navlinks: {
-    marginLeft: theme.spacing(5),
+    marginLeft: "10px",
     display: "flex",
   },
   logo: {
@@ -23,9 +22,25 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     textDecoration: "none",
-    color: "#1787cb",
-    fontSize: "1.5em",
-    marginLeft: theme.spacing(5),
+    color: "#354721",
+    fontSize: "1.2em",
+    textAlign: "center",
+    marginTop: "10px",
+    marginLeft: "10px",
+    paddingLeft: "5px",
+    paddingRight: "5px",
+    borderRadius: "10px",
+    "&:hover": {
+      color: "#0074c1",
+      borderBottom: "1px solid #0074c1",
+    },
+  },
+  button: {
+    textDecoration: "none",
+    color: "#354721",
+    fontSize: "1.2em",
+    textTransform: "none",
+    marginLeft: "10px",
     "&:hover": {
       color: "#0074c1",
       borderBottom: "1px solid #0074c1",
@@ -39,6 +54,18 @@ const useStyles = makeStyles((theme) => ({
 const AppBar = styled.div`
   position: static;
   background-color: #e6e6e6;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+
+  @media only screen and ${breakpoints.device.md} {
+    visibility: visible;
+    height: 60px;
+  }
+  @media only screen and ${breakpoints.device.lg} {
+    visibility: visible;
+    max-height: 70px;
+  }
 `;
 
 const Nav = styled.div`
@@ -48,71 +75,104 @@ const Nav = styled.div`
   max-width: 1100px;
 `;
 
-const Logo = styled.img`
-  max-height: 50px;
-`;
-
 function NavBar() {
   const classes = useStyles();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl2, setAnchorEl2] = React.useState(null);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+  const handleClick2 = (event) => {
+    setAnchorEl2(event.currentTarget);
+  };
 
   const handleClose = () => {
     setAnchorEl(null);
+  };
+  const handleClose2 = () => {
+    setAnchorEl2(null);
   };
 
   return (
     <AppBar>
       <CssBaseline />
       <Toolbar>
-        <Logo src={LogoImage} />
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Bellingen Environment Centre
-        </Typography>
         <Nav>
           <div className={classes.navlinks}>
             <Link to="/" className={classes.link}>
               Home
             </Link>
-            <div >
-              <div>
-                <Button
-                  aria-controls="simple-menu"
-                  aria-haspopup="true"
-                  onClick={handleClick}
-                >
-                  Open Menu
-                </Button>
-                <Menu
-                  id="simple-menu"
-                  anchorEl={anchorEl}
-                  keepMounted
-                  open={Boolean(anchorEl)}
-                  onClose={handleClose}
-                >
-                  <MenuItem onClick={handleClose}>
-                    <Link to="/contactPage" className={classes.link}>
-                      Contact
-                    </Link>
-                  </MenuItem>
-                  <MenuItem onClick={handleClose}>
-                    <Link to="/blankPage" className={classes.link}>
-                      Blank
-                    </Link>
-                  </MenuItem>
-                  <MenuItem onClick={handleClose}>Logout</MenuItem>
-                </Menu>
-              </div>
+            <div>
+              <Button className={classes.button} onClick={handleClick}>
+                About Us
+              </Button>
+              <Menu
+                id="about"
+                anchorEl={anchorEl}
+                keepMounted
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose}>
+                  <Link to="/aboutPage" className={classes.link}>
+                    About BEC
+                  </Link>
+                </MenuItem>
+                {/* <MenuItem onClick={handleClose}>
+                  <Link to="/supportPage" className={classes.link}>
+                    Our Community
+                  </Link>
+                </MenuItem> */}
+                <MenuItem onClick={handleClose}>
+                  <Link to="/historyPage" className={classes.link}>
+                    Our History
+                  </Link>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                  <Link to="/loftPage" className={classes.link}>
+                    The Loft (for hire)
+                  </Link>
+                </MenuItem>
+              </Menu>
             </div>
+            <div>
+              <Button className={classes.button} onClick={handleClick2}>
+                Campaigns
+              </Button>
+              <Menu
+                id="campaigns"
+                anchorEl={anchorEl2}
+                keepMounted
+                open={Boolean(anchorEl2)}
+                onClose={handleClose2}
+              >
+                <MenuItem onClick={handleClose2}>
+                  <Link to="/gknpPage" className={classes.link}>
+                    The Great Koala National Park
+                  </Link>
+                </MenuItem>
+                <MenuItem onClick={handleClose2}>
+                  <Link to="/kalangPage" className={classes.link}>
+                    The Kalang Headwaters
+                  </Link>
+                </MenuItem>
+                <MenuItem onClick={handleClose2}>
+                  <Link to="/blueberryPage" className={classes.link}>
+                    The Blueberry Campaign
+                  </Link>
+                </MenuItem>
+              </Menu>
+            </div>            
+            <Link to="/helpPage" className={classes.link}>
+              What can I do?
+            </Link>
+            <Link to="/communityPage" className={classes.link}>
+              Community
+            </Link>
             <Link to="/contactPage" className={classes.link}>
               Contact
-            </Link>
-            <Link to="/blankPage" className={classes.link}>
-              Blank
             </Link>
           </div>
         </Nav>
