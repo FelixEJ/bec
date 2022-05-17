@@ -31,7 +31,7 @@ const Container = styled.div`
     margin-right: 1vw;
     margin-top: -40vh;
     float: left;
-    width: 25vw;
+    width: 45vw;
   }
 `;
 
