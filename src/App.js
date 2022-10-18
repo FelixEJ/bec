@@ -2,6 +2,7 @@ import * as React from "react";
 import "./App.css";
 import Routes from "./components/routes.js";
 import Header from "./components/header";
+import ScrollTop from "./components/scrollTopButton";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <main>
         {/* <Header /> */}
         <Routes />
+        <ScrollTop/>
       </main>
     </div>
   );

@@ -55,7 +55,7 @@ function BurgerMenu() {
       top: "3vh",
     },
     bmBurgerBars: {
-      background: "black",
+      background: "white",
     },
     bmBurgerBarsHover: {
       background: "grey",
