@@ -43,6 +43,7 @@ const Text = styled.div`
   margin-left: auto;
   margin-right: auto;
   width: 90%;
+  text-align: center;
 
   max-width: 1200px;
 `;
@@ -79,9 +80,13 @@ const Support = () => {
             <br/>
             Please give generously by bank transfer:
             <br/>
-            Name: Bellingen Environment Centre
             <br/>
-            BSB: 2222222
+            <b>Name:</b> Bellingen Environment Centre
+            <br/>
+            <b>BSB:</b> 533000
+            <br/>
+            <b>Account:</b> 32804671
+            <br/>
             <br/>
             If you could put "BE" in your transfer description this would greatly help out our secretary.
             <br/>
