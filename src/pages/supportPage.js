@@ -8,23 +8,24 @@ import NavBar from "../components/navbar";
 import HorizButtonBar from "../components/horizButtonBar";
 import Footer from "../components/footer";
 
+import BgImage01 from "../images/one.jpg";
+import Donate from "../images/donate_3.png";
+
 const Container = styled.div`
   display: block;
   margin-left: auto;
   margin-right: auto;
 
-  max-width: 1200px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  max-width: 100%;
 `;
 
 const TopBackgroundImage = styled.div`
   background-color: none;
-  margin: 1% 0% 1% 0%;
-  column-count: 1;
-  column-gap: 1%;
   margin-top: 5vh;
-  height: 80vh;
-
-  max-height: 500px;
 
   @media only screen and ${breakpoints.device.md} {
     max-height: 650px;
@@ -34,36 +35,66 @@ const TopBackgroundImage = styled.div`
   }
 `;
 
+const Text = styled.div`
+  background-color: rgba(200, 200, 200, 0.9);
+  padding: 2vh;
+  margin: 2vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+
+  max-width: 1200px;
+`;
+
+const Icon = styled.img`
+  width: 45vw;
+  padding: 1vw;
+  opacity: 1;
+  margin: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media only screen and ${breakpoints.device.md} {
+    max-width: 200px;
+  }
+`;
+
+const Title = styled.h1`
+text-align: center;
+`;
+
 const Support = () => {
   return (
     <Container>
-        <NavBar />
-        {/* <Parallax bgImage={BgImage01} strength={-200}>
+      <NavBar />
+      <Parallax bgImage={BgImage01} strength={0}>
         <TopBackgroundImage>
-          <SwipeableTextMobileStepper />
-          <HorizButtonBar />
+          <Text>
+            <Title>Donate</Title>
+            <p>
+            The Biodiversity Embassy was initiated by Mark Graham five years ago and is attached to the Bellingen Environment Centre’s Citizen Science Program.  You will be donating to the Biodiversity Embassy and funds will be used to care for people working on the front line to identify Threatened Species and their Habitat.  Funds will also be used to continue the information and evidence gathering about our precious remaining Fauna and Flora.
+            <br/>
+            <br/>
+            Please give generously by bank transfer:
+            <br/>
+            Name: Bellingen Environment Centre
+            <br/>
+            BSB: 2222222
+            <br/>
+            If you could put "BE" in your transfer description this would greatly help out our secretary.
+            <br/>
+            <br/>
+            You can also donate directly through our Square profile by clicking the button below.
+            </p>
+            <a href="https://square.link/u/zLWAws45" target="_blank" rel="noopener noreferrer">
+              <Icon src={Donate} alt="Donate Icon" />
+            </a>
+          </Text>
         </TopBackgroundImage>
-      </Parallax> */}
-      <h1>Support</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
-      <h2>Blank page</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
+      </Parallax>
+      <Footer />
     </Container>
   );
 };

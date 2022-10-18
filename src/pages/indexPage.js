@@ -57,7 +57,7 @@ const BottomBackgroundImage = styled.div`
 const Index = () => {
   return (
     <Container>
-      <NavBar />
+      <NavBar />      
       <Parallax bgImage={BgImage01} strength={-200}>
         <TopBackgroundImage>
           <SwipeableTextMobileStepper />

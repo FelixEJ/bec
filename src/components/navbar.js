@@ -116,22 +116,22 @@ function NavBar() {
                 onClose={handleClose}
               >
                 <MenuItem onClick={handleClose}>
-                  <Link to="/aboutPage" className={classes.link}>
+                  <Link to="/about" className={classes.link}>
                     About BEC
                   </Link>
                 </MenuItem>
                 {/* <MenuItem onClick={handleClose}>
-                  <Link to="/supportPage" className={classes.link}>
+                  <Link to="/support" className={classes.link}>
                     Our Community
                   </Link>
                 </MenuItem> */}
                 <MenuItem onClick={handleClose}>
-                  <Link to="/historyPage" className={classes.link}>
+                  <Link to="/history" className={classes.link}>
                     Our History
                   </Link>
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
-                  <Link to="/loftPage" className={classes.link}>
+                  <Link to="/loft" className={classes.link}>
                     The Loft (for hire)
                   </Link>
                 </MenuItem>
@@ -149,31 +149,31 @@ function NavBar() {
                 onClose={handleClose2}
               >
                 <MenuItem onClick={handleClose2}>
-                  <Link to="/gknpPage" className={classes.link}>
+                  <Link to="/gknp" className={classes.link}>
                     The Great Koala National Park
                   </Link>
                 </MenuItem>
                 <MenuItem onClick={handleClose2}>
-                  <Link to="/kalangPage" className={classes.link}>
+                  <Link to="/kalang" className={classes.link}>
                     The Kalang Headwaters
                   </Link>
                 </MenuItem>
                 <MenuItem onClick={handleClose2}>
-                  <Link to="/blueberryPage" className={classes.link}>
+                  <Link to="/blueberry" className={classes.link}>
                     The Blueberry Campaign
                   </Link>
                 </MenuItem>
               </Menu>
             </div>            
-            <Link to="/helpPage" className={classes.link}>
-              What can I do?
+            <Link to="/support" className={classes.link}>
+              Support Us
             </Link>
-            <Link to="/communityPage" className={classes.link}>
+            {/* <Link to="/community" className={classes.link}>
               Community
-            </Link>
-            <Link to="/contactPage" className={classes.link}>
+            </Link> */}
+            {/* <Link to="/contact" className={classes.link}>
               Contact
-            </Link>
+            </Link> */}
           </div>
         </Nav>
       </Toolbar>

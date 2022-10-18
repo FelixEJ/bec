@@ -23,17 +23,17 @@ const Routes = () => {
       {/* <NavBar /> */}
         <Switch>
           <Route exact path="/" component={Index}></Route>
-          <Route path="/contactPage" component={Contact}></Route>
-          <Route path="/historyPage" component={History}></Route>
-          <Route path="/aboutPage" component={About}></Route>
-          <Route path="/blueberryPage" component={Blueberry}></Route>
-          <Route path="/communityPage" component={Community}></Route>
-          <Route path="/gknpPage" component={GKNP}></Route>
-          <Route path="/helpPage" component={Help}></Route>
-          <Route path="/kalangPage" component={Kalang}></Route>
-          <Route path="/loftPage" component={Loft}></Route>
-          <Route path="/statementPage" component={Statement}></Route>
-          <Route path="/supportPage" component={Support}></Route>
+          <Route path="/contact" component={Contact}></Route>
+          <Route path="/history" component={History}></Route>
+          <Route path="/about" component={About}></Route>
+          <Route path="/blueberry" component={Blueberry}></Route>
+          <Route path="/community" component={Community}></Route>
+          <Route path="/gknp" component={GKNP}></Route>
+          <Route path="/help" component={Help}></Route>
+          <Route path="/kalang" component={Kalang}></Route>
+          <Route path="/loft" component={Loft}></Route>
+          <Route path="/statement" component={Statement}></Route>
+          <Route path="/support" component={Support}></Route>
         </Switch>
     </Router>
   );

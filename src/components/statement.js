@@ -45,7 +45,7 @@ const Container = styled.div`
   @media only screen and ${breakpoints.device.lg} {
     flex-direction: column;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: center;
   }
 `;
 

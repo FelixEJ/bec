@@ -32,7 +32,7 @@ const TopBackgroundImage = styled.div`
 `;
 
 const Text = styled.div`
-  background-color: rgba(200, 200, 200, 0.7);
+  background-color: rgba(200, 200, 200, 0.9);
   padding: 2vh;
   margin: 2vh;
 `;

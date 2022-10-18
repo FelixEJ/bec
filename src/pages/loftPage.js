@@ -22,6 +22,7 @@ const TopBackgroundImage = styled.div`
   margin: 0 0% 1% 0%;
   column-count: 1;
   column-gap: 1%;
+  margin-top: 5vh;
   min-height: 90vh;
 
   @media only screen and ${breakpoints.device.md} {
@@ -41,8 +42,12 @@ const Subtitle = styled.div`
 `;
 
 const Text = styled.div`
-  background-color: rgba(200, 200, 200, 0.8);
+  background-color: rgba(200, 200, 200, 0.9);
   padding: 5vh;
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const Loft = () => {

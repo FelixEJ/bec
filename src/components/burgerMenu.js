@@ -193,24 +193,24 @@ function BurgerMenu() {
                   >
                     <MenuItem onClick={handleClose}>
                       <ButtonLink
-                        href="/aboutPage"
+                        href="/about"
                         className={classes.link}
                       >
                         About BEC
                       </ButtonLink>
                     </MenuItem>
-                    <MenuItem onClick={handleClose}>
-                      <ButtonLink href="/supportPage" className={classes.link}>
+                    {/* <MenuItem onClick={handleClose}>
+                      <ButtonLink href="/support" className={classes.link}>
                         Our Community
                       </ButtonLink>
-                    </MenuItem>
+                    </MenuItem> */}
                     <MenuItem onClick={handleClose}>
-                      <ButtonLink href="/historyPage" className={classes.link}>
+                      <ButtonLink href="/history" className={classes.link}>
                         Our History
                       </ButtonLink>
                     </MenuItem>
                     <MenuItem onClick={handleClose}>
-                      <ButtonLink href="/loftPage" className={classes.link}>
+                      <ButtonLink href="/loft" className={classes.link}>
                         The Loft (for hire)
                       </ButtonLink>
                     </MenuItem>
@@ -230,18 +230,18 @@ function BurgerMenu() {
                     onClose={handleClose2}
                   >
                     <MenuItem onClick={handleClose2}>
-                      <ButtonLink href="/gknpPage" className={classes.link}>
+                      <ButtonLink href="/gknp" className={classes.link}>
                         The Great Koala National Park
                       </ButtonLink>
                     </MenuItem>
                     <MenuItem onClick={handleClose2}>
-                      <ButtonLink href="/kalangPage" className={classes.link}>
+                      <ButtonLink href="/kalang" className={classes.link}>
                         The Kalang Headwaters
                       </ButtonLink>
                     </MenuItem>
                     <MenuItem onClick={handleClose2}>
                       <ButtonLink
-                        href="/blueberryPage"
+                        href="/blueberry"
                         className={classes.link}
                       >
                         The Blueberry Campaign
@@ -251,11 +251,11 @@ function BurgerMenu() {
                 </div>
               </Item>
               <Item>
-                <Link id="help" className="menu-item" href="/helpPage">
-                  What can I do?
+                <Link id="support" className="menu-item" href="/support">
+                  Support Us
                 </Link>
               </Item>
-              <Item>
+              {/* <Item>
                 <Link
                   id="community"
                   className="menu-item"
@@ -263,12 +263,12 @@ function BurgerMenu() {
                 >
                   Community
                 </Link>
-              </Item>
-              <Item>
+              </Item> */}
+              {/* <Item>
                 <Link id="contact" className="menu-item" href="/contactPage">
                   Contact
                 </Link>
-              </Item>
+              </Item> */}
             </List>
           </main>
         </Slide>

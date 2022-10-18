@@ -6,50 +6,32 @@ import breakpoints from "./breakpoints";
 import FooterImage from "../images/Acknowledge-Background-Image.png";
 import BgImage02 from "../images/zero.jpg";
 
-const Image = styled.img`
-  width: 95vw;
-  max-width: 960px;
-  display: block;
-
-  margin-left: auto;
-  margin-right: auto;
-  background-color: none;
-
-  @media only screen and ${breakpoints.device.lg} {
-    width: 45vw;
-  }
-`;
-
 const Container = styled.div`
   display: block;
 
   margin-left: auto;
   margin-right: auto;
-
-  @media only screen and ${breakpoints.device.lg} {
-    margin-left: 1vw;
-    margin-right: 1vw;
-    margin-top: -40vh;
-    float: left;
-    width: 45vw;
-  }
+  padding: 15px;
+  background-color: #3c763d;
 `;
 
-const BottomBackgroundImage = styled.div`
-  background-color: none;
-  margin: 1% 0% 1% 0%;
-  column-count: 1;
-  column-gap: 1%;
+const Text = styled.div`
+  color: white;
+  max-width: 60vw;
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const Footer = () => {
   return (
     <Container>
-      <Parallax bgImage={BgImage02} strength={200}>
-        <BottomBackgroundImage>
-          <Image src={FooterImage} alt="Gumbaynggirr acknowledgement" />
-        </BottomBackgroundImage>
-      </Parallax>
+      <Text>
+        We acknowledge and pay our respects to the traditional custodians of the
+        lands and waters of the Gumbaynggirr, and all Aboriginal Elders, past,
+        present, and emerging.
+      </Text>
     </Container>
   );
 };

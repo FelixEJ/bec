@@ -84,8 +84,6 @@ const Root = styled.div`
 
   @media only screen and ${breakpoints.device.lg} {
     max-width: 70vw;
-    float: right;
-    margin-right: 2vw;
     margin-bottom: 5vh;
   }
 `;
@@ -99,7 +97,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgba(200, 200, 200, 0.7);
+  background-color: rgba(200, 200, 200, 0.9);
   max-height: 35vh;
 
   @media only screen and ${breakpoints.device.md} {

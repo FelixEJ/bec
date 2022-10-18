@@ -40,7 +40,7 @@ const BottomBackgroundImage = styled.div`
 `;
 
 const Text = styled.div`
-  background-color: rgba(200, 200, 200, 0.7);
+  background-color: rgba(200, 200, 200, 0.9);
   padding-left: 2vh;
   padding-right: 2vh;
   margin-left: 2vh;
