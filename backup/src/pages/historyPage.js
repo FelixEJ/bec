@@ -24,7 +24,6 @@ const TopBackgroundImage = styled.div`
   margin: 1% 0% 1% 0%;
   column-count: 1;
   column-gap: 1%;
-  margin-top: 5vh;
 
   @media only screen and ${breakpoints.device.md} {
   }
@@ -34,7 +33,6 @@ const TopBackgroundImage = styled.div`
 
 const BottomBackgroundImage = styled.div`
   background-color: none;
-  margin: 1% 0% 1% 0%;
   column-count: 1;
   column-gap: 1%;
 `;

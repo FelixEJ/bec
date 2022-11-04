@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import breakpoints from "./breakpoints";
-import Join from "../images/join-us_0.png";
 import Donate from "../images/donate_3.png";
 import Membership from "../images/Become-a-member.png";
 
@@ -25,24 +23,22 @@ const Container = styled.div`
 `;
 
 const Icon = styled.img`
-  width: 45vw;
+  max-width: 45vw;
   padding: 1vw;
   opacity: 1;
   margin: auto;
-
-  @media only screen and ${breakpoints.device.md} {
-    max-width: 200px;
-  }
+  z-index: 15;  
 `;
 
 const HorizButtonBar = () => {
   return (
     <Container>
-      {/* <Icon src={Join} alt="Join us Icon" /> */}
-      <Link to="/support" target="_blank" rel="noopener noreferrer">
+      <Link to="/support" >
         <Icon src={Donate} alt="Donate Icon" />
       </Link>
-      {/* <Icon src={Membership} alt="Membership Icon" /> */}
+      <Link to="/membership" >
+        <Icon src={Membership} alt="Membership Icon" />
+      </Link>
     </Container>
   );
 };

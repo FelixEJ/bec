@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import breakpoints from "./breakpoints";
 import {
   Toolbar,
   CssBaseline,
@@ -58,13 +57,17 @@ const AppBar = styled.div`
   height: 0;
   overflow: hidden;
 
-  @media only screen and ${breakpoints.device.md} {
+  @media only screen and (min-width: 480px) {
+  }
+  @media only screen and (min-width: 768px) {
     visibility: visible;
     height: 60px;
   }
-  @media only screen and ${breakpoints.device.lg} {
+  @media only screen and (min-width: 1024px) {
     visibility: visible;
     max-height: 70px;
+  }
+  @media only screen and (min-width: 1600px) {
   }
 `;
 
@@ -80,6 +83,7 @@ function NavBar() {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [anchorEl2, setAnchorEl2] = React.useState(null);
+  const [anchorEl3, setAnchorEl3] = React.useState(null);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -87,12 +91,18 @@ function NavBar() {
   const handleClick2 = (event) => {
     setAnchorEl2(event.currentTarget);
   };
+  const handleClick3 = (event) => {
+    setAnchorEl3(event.currentTarget);
+  };
 
   const handleClose = () => {
     setAnchorEl(null);
   };
   const handleClose2 = () => {
     setAnchorEl2(null);
+  };
+  const handleClose3 = () => {
+    setAnchorEl3(null);
   };
 
   return (
@@ -117,22 +127,12 @@ function NavBar() {
               >
                 <MenuItem onClick={handleClose}>
                   <Link to="/about" className={classes.link}>
-                    About BEC
+                    About the BEC
                   </Link>
                 </MenuItem>
-                {/* <MenuItem onClick={handleClose}>
-                  <Link to="/support" className={classes.link}>
-                    Our Community
-                  </Link>
-                </MenuItem> */}
                 <MenuItem onClick={handleClose}>
                   <Link to="/history" className={classes.link}>
                     Our History
-                  </Link>
-                </MenuItem>
-                <MenuItem onClick={handleClose}>
-                  <Link to="/loft" className={classes.link}>
-                    The Loft (for hire)
                   </Link>
                 </MenuItem>
               </Menu>
@@ -149,31 +149,45 @@ function NavBar() {
                 onClose={handleClose2}
               >
                 <MenuItem onClick={handleClose2}>
-                  <Link to="/gknp" className={classes.link}>
+                  <Link to="/GreatKoalaNationalPark" className={classes.link}>
                     The Great Koala National Park
                   </Link>
                 </MenuItem>
                 <MenuItem onClick={handleClose2}>
-                  <Link to="/kalang" className={classes.link}>
+                  <Link to="/KalangHeadwaters" className={classes.link}>
                     The Kalang Headwaters
                   </Link>
                 </MenuItem>
                 <MenuItem onClick={handleClose2}>
-                  <Link to="/blueberry" className={classes.link}>
+                  <Link to="/BlueBerries" className={classes.link}>
                     The Blueberry Campaign
                   </Link>
                 </MenuItem>
               </Menu>
-            </div>            
-            <Link to="/support" className={classes.link}>
-              Support Us
-            </Link>
-            {/* <Link to="/community" className={classes.link}>
-              Community
-            </Link> */}
-            {/* <Link to="/contact" className={classes.link}>
-              Contact
-            </Link> */}
+            </div>
+            <div>
+              <Button className={classes.button} onClick={handleClick3}>
+                Support Us
+              </Button>
+              <Menu
+                id="support"
+                anchorEl={anchorEl3}
+                keepMounted
+                open={Boolean(anchorEl3)}
+                onClose={handleClose3}
+              >
+                <MenuItem onClick={handleClose3}>
+                  <Link to="/support" className={classes.link}>
+                    Donate
+                  </Link>
+                </MenuItem>
+                <MenuItem onClick={handleClose3}>
+                  <Link to="/membership" className={classes.link}>
+                    Join the BEC
+                  </Link>
+                </MenuItem>
+              </Menu>
+            </div>
           </div>
         </Nav>
       </Toolbar>

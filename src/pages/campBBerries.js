@@ -1,55 +1,65 @@
 import React from "react";
 import styled from "styled-components";
-import breakpoints from "../components/breakpoints";
 import { Parallax } from "react-parallax";
 import "../App.css";
 
-import NavBar from "../components/navbar";
-import HorizButtonBar from "../components/horizButtonBar";
 import Footer from "../components/footer";
 
-import BgImage01 from "../images/one.jpg";
+import BgImage01 from "../images/BGone.jpg";
 
 const Container = styled.div`
   display: block;
   margin-left: auto;
   margin-right: auto;
-
-  max-width: 1200px;
 `;
 
-const TopBackgroundImage = styled.div`
-  background-color: none;
-  margin: 1% 0% 1% 0%;
-  column-count: 1;
-  column-gap: 1%;
-  margin-top: 5vh;
-
-  @media only screen and ${breakpoints.device.md} {
-  }
-  @media only screen and ${breakpoints.device.lg} {
-  }
+const ParallaxCont = styled.div`
+  min-height: 100vh;
 `;
 
-const Text = styled.div`
-  background-color: rgba(200, 200, 200, 0.9);
-  padding: 2vh;
-  margin: 2vh;
-`;
-
-const Subtitle = styled.div`
-  font-size: 1.2em;
+const Title = styled.h1`
+  text-align: center;
   text-transform: uppercase;
 `;
 
-const Blueberry = () => {
+const Subtitle = styled.h3`
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-align: center;
+`;
+
+const TextBox = styled.div`
+  display: block;
+  margin: 15px auto;
+  padding: 15px;
+  background: rgb(255, 255, 255, 0.9);
+  border-radius: 5px;
+  max-width: 95vw;
+
+  @media only screen and (min-width: 480px) {
+  }
+  @media only screen and (min-width: 768px) {
+  }
+  @media only screen and (min-width: 1024px) {
+    max-width: 1000px;
+  }
+  @media only screen and (min-width: 1600px) {
+    max-width: 1200px;
+  }
+`;
+
+const Link = styled.a`
+  color: #284124;
+  text-decoration: underline;
+`;
+
+const BlueBerries = () => {
   return (
     <Container>
-      <NavBar />
       <Parallax bgImage={BgImage01} strength={-200}>
-        <TopBackgroundImage>
-          <Text>
-            <h1>The Blueberry Campaign</h1>
+        <ParallaxCont>
+          <TextBox>
+            <Title>The Blueberry Campaign</Title>
             <p>
               The Bellingen Environment Centre started working on the Blueberry
               Campaign in 2015 when a local Valery resident notified them of
@@ -141,9 +151,9 @@ const Blueberry = () => {
               reduce their impacts they have on our creeks and rivers.
             </p>
             <p>
-              <a href="http://www.abc.net.au/news/2018-04-08/blueberry-farms-blamed-for-nitrogen-in-creek/9625214">
+              <Link href="http://www.abc.net.au/news/2018-04-08/blueberry-farms-blamed-for-nitrogen-in-creek/9625214">
                 ABC national news coverage of the Bucca Bucca creek report.
-              </a>
+              </Link>
             </p>
             <Subtitle>Over use of chemicals</Subtitle>
             <p>
@@ -233,23 +243,51 @@ const Blueberry = () => {
               our petition, donate and educate your community.
             </p>
             <p>
-              <a href="https://www.change.org/p/no-blueberry-farm-boambee">
+              <Link href="https://www.change.org/p/no-blueberry-farm-boambee">
                 Sign this petition
-              </a>
+              </Link>
             </p>
-            <p>We are calling upon concerned residents to regularly contact state and local government and the media to express their concerns have a standard letter and mailing list that you email once a month or once a week. Listed below are some useful contacts.</p>
-            <p>The Hon Sussan Ley MP Electorate Office Telephone:<a id="phone" href="tel:+61260213264">(02) 6021 3264</a>; Fax:<a id="phone" href="tel:+61260216620">(02) 6021 6620</a> </p>
-            <p>Email <a href="https://sussanley.com/">can be found here</a></p>
+            <p>
+              We are calling upon concerned residents to regularly contact state
+              and local government and the media to express their concerns have
+              a standard letter and mailing list that you email once a month or
+              once a week. Listed below are some useful contacts.
+            </p>
+            <p>
+              The Hon Sussan Ley MP Electorate Office Telephone:
+              <Link id="phone" href="tel:+61260213264">
+                (02) 6021 3264
+              </Link>
+              ; Fax:
+              <Link id="phone" href="tel:+61260216620">
+                (02) 6021 6620
+              </Link>{" "}
+            </p>
+            <p>
+              Email <a href="https://sussanley.com/">can be found here</a>
+            </p>
             <p>Pat Conaghan, National Party of Australia </p>
-            <p>Contact <a href="https://patconaghan.com.au/contact/">can be found here</a></p>            
-            <p>Melinda Pavey Member for Oxley Telephone:<a id="phone" href="tel:+61265626190">(02) 6562 6190</a></p>
-            <p>Email <a href="oxley@parliment.nsw.gov.au">them here</a></p>
-          </Text>
-        </TopBackgroundImage>
+            <p>
+              Contact{" "}
+              <Link href="https://patconaghan.com.au/contact/">
+                can be found here
+              </Link>
+            </p>
+            <p>
+              Melinda Pavey Member for Oxley Telephone:
+              <Link id="phone" href="tel:+61265626190">
+                (02) 6562 6190
+              </Link>
+            </p>
+            <p>
+              Email <Link href="oxley@parliment.nsw.gov.au">them here</Link>
+            </p>
+          </TextBox>
+        </ParallaxCont>
+        <Footer />
       </Parallax>
-      <Footer />
     </Container>
   );
 };
 
-export default Blueberry;
+export default BlueBerries;

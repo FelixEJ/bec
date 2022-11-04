@@ -43,7 +43,10 @@ const Subtitle = styled.div`
 
 const Text = styled.div`
   background-color: rgba(200, 200, 200, 0.9);
-  padding: 5vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  margin-left: 2vh;
+  margin-right: 2vh;
   width: 90%;
   display: block;
   margin-left: auto;

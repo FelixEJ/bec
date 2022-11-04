@@ -1,55 +1,60 @@
 import React from "react";
 import styled from "styled-components";
-import breakpoints from "../components/breakpoints";
 import { Parallax } from "react-parallax";
 import "../App.css";
 
-import NavBar from "../components/navbar";
-import HorizButtonBar from "../components/horizButtonBar";
 import Footer from "../components/footer";
 
-import BgImage01 from "../images/one.jpg";
+import BgImage01 from "../images/BGone.jpg";
 
 const Container = styled.div`
   display: block;
   margin-left: auto;
   margin-right: auto;
-
-  max-width: 1200px;
 `;
 
-const TopBackgroundImage = styled.div`
-  background-color: none;
-  margin: 1% 0% 1% 0%;
-  column-count: 1;
-  column-gap: 1%;
-  margin-top: 5vh;
-
-  @media only screen and ${breakpoints.device.md} {
-  }
-  @media only screen and ${breakpoints.device.lg} {
-  }
+const ParallaxCont = styled.div`
+  min-height: 100vh;
 `;
 
-const Text = styled.div`
-  background-color: rgba(200, 200, 200, 0.9);
-  padding: 2vh;
-  margin: 2vh;
+const Title = styled.h1`
+  text-align: center;
+  text-transform: uppercase;
 `;
 
-const Subtitle = styled.div`
+const Subtitle = styled.h3`
   font-size: 1.2em;
   text-transform: uppercase;
+  text-align: center;
+`;
+
+const TextBox = styled.div`
+  display: block;
+  margin: 15px auto;
+  padding: 15px;
+  background: rgb(255, 255, 255, 0.9);
+  border-radius: 5px;
+  max-width: 95vw;
+
+  @media only screen and (min-width: 480px) {
+  }
+  @media only screen and (min-width: 768px) {
+  }
+  @media only screen and (min-width: 1024px) {
+    max-width: 1000px;
+  }
+  @media only screen and (min-width: 1600px) {
+    max-width: 1200px;
+  }
 `;
 
 const About = () => {
   return (
     <Container>
-      <NavBar />
       <Parallax bgImage={BgImage01} strength={-200}>
-        <TopBackgroundImage>
-          <Text>
-            <h1>About the Bellingen Environment Centre</h1>
+        <ParallaxCont>
+          <TextBox>
+            <Title>About the BEC</Title>
             <p>
               The BEC was formed in 1989 in response to the growing awareness
               that to deal with environmental issues, members of the community
@@ -123,10 +128,10 @@ const About = () => {
               Marine Park Authorities. Our informed opinion is often sought by
               the Media and Authorities.
             </p>
-          </Text>
-        </TopBackgroundImage>
+          </TextBox>
+        </ParallaxCont>
+        <Footer />
       </Parallax>
-      <Footer />
     </Container>
   );
 };

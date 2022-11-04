@@ -29,14 +29,18 @@ const Container = styled.div`
   max-width: 100vw;
 `;
 const TopBackgroundImage = styled.div`
-  background-color: none;
-  margin: 1% 0% 1% 0%;
-  column-count: 1;
-  column-gap: 1%;
-  margin-top: 5vh;
-  height: 80vh;
+  background-image: url(${BgImage01});
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
 
-  max-height: 500px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 
   @media only screen and ${breakpoints.device.md} {
     max-height: 650px;
@@ -57,13 +61,13 @@ const BottomBackgroundImage = styled.div`
 const Index = () => {
   return (
     <Container>
-      <NavBar />      
-      <Parallax bgImage={BgImage01} strength={-200}>
-        <TopBackgroundImage>
-          <SwipeableTextMobileStepper />
-          <HorizButtonBar />
-        </TopBackgroundImage>
-      </Parallax>
+      <NavBar />
+      {/* <Parallax bgImage={BgImage01} strength={-200}> */}
+      <TopBackgroundImage>
+        <SwipeableTextMobileStepper />
+        <HorizButtonBar />
+      </TopBackgroundImage>
+      {/* </Parallax> */}
       <Parallax bgImage={BgImage02} strength={200}>
         <BottomBackgroundImage>
           <Statement />

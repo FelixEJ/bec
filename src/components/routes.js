@@ -1,42 +1,30 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import NavBar from "./navbar";
-import BurgerMenu from "./burgerMenu";
+import { Routes ,Route } from 'react-router-dom';
 
-import Index from "../pages/indexPage";
-import Contact from "../pages/contactPage";
-import History from "../pages/historyPage";
-import About from "../pages/aboutPage";
-import Blueberry from "../pages/blueberryPage";
-import Community from "../pages/communityPage";
-import GKNP from "../pages/gknpPage";
-import Help from "../pages/helpPage";
-import Kalang from "../pages/kalangPage";
-import Loft from "../pages/loftPage";
-import Statement from "../pages/statementPage";
-import Support from "../pages/supportPage";
+import Index from "../pages/index";
+import About from "../pages/about";
+import BlueBerries from "../pages/campBBerries";
+import KoalaNationalPark from "../pages/campGKNP";
+import KalangHeadwaters from "../pages/campKalang";
+import History from "../pages/history";
+import Membership from "../pages/membership";
+import Support from "../pages/support";
 
-const Routes = () => {
+const PageRoutes = () => {
   return (
-    <Router>
-      <BurgerMenu />
-      {/* <NavBar /> */}
-        <Switch>
-          <Route exact path="/" component={Index}></Route>
-          <Route path="/contact" component={Contact}></Route>
-          <Route path="/history" component={History}></Route>
-          <Route path="/about" component={About}></Route>
-          <Route path="/blueberry" component={Blueberry}></Route>
-          <Route path="/community" component={Community}></Route>
-          <Route path="/gknp" component={GKNP}></Route>
-          <Route path="/help" component={Help}></Route>
-          <Route path="/kalang" component={Kalang}></Route>
-          <Route path="/loft" component={Loft}></Route>
-          <Route path="/statement" component={Statement}></Route>
-          <Route path="/support" component={Support}></Route>
-        </Switch>
-    </Router>
+    <div>
+      <Routes>
+        <Route path="/" element={<Index/>}></Route>
+        <Route path="/about" element={<About/>}></Route>
+        <Route path="/BlueBerries" element={<BlueBerries/>}></Route>
+        <Route path="/GreatKoalaNationalPark" element={<KoalaNationalPark/>}></Route>
+        <Route path="/KalangHeadwaters" element={<KalangHeadwaters/>}></Route>
+        <Route path="/history" element={<History/>}></Route>
+        <Route path="/membership" element={<Membership/>}></Route>
+        <Route path="/support" element={<Support/>}></Route>
+      </Routes>
+    </div>
   );
 };
 
-export default Routes;
+export default PageRoutes;
