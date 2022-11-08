@@ -87,8 +87,83 @@ const Statement = () => {
       </Container>
       <Container>
         <Text>
-          <Subtitle>COMMUNITY GROUPS</Subtitle>
+          <Subtitle>Contact our Local Aboriginal Land Councils</Subtitle>
           <List>
+            <ListItem>
+              <Link
+                href="https://alc.org.au/land_council/bowraville/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                &#8226; Bowraville Land Council
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://alc.org.au/land_council/nambucca-heads/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                &#8226; Nambucca Heads
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://unkya.com/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                &#8226; Macksville
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://alc.org.au/land_council/coffs-harbour/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                &#8226; Coffs Harbour
+              </Link>
+            </ListItem>            
+          </List>
+          <Subtitle>The Bellingen Environment Centre is proud to work alongside our Local and Regional Protectors</Subtitle>
+          <List>
+            <ListItem>
+              <Link
+                href="https://www.nvca.org.au/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                &#8226; Nambucca Valley Conservation Assoc
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://www.facebook.com/DorrigoEnvironment"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                &#8226; Dorrigo Environment Watch
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://cec.org.au/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                &#8226; Clarence Valley Environment Centre
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://friendsofpinecreek.com/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                &#8226; Friends of Pine Creek FoPC
+              </Link>
+            </ListItem>
             <ListItem>
               <Link
                 href="http://friendsofkalangheadwaters.com.au/"
@@ -100,40 +175,106 @@ const Statement = () => {
             </ListItem>
             <ListItem>
               <Link
+                href="https://www.kalangrfa.org/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                &#8226; Kalang River and Forest Alliance
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://www.facebook.com/forestecologyalliance"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                &#8226; Forest Ecology Alliance
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://www.facebook.com/groups/445142404085110"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                &#8226; Friends of Karanghi
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://www.facebook.com/groups/482584800380402/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                &#8226; Friends of Bagawa
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="http://friendsofkalangheadwaters.com.au/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                &#8226; Friends of Kalang Headwaters
+              </Link>
+            </ListItem>
+          </List>
+          <Subtitle>We are working with the following Peak Bodies to Protect our Land and Waterways</Subtitle>
+          <List>
+            <ListItem>
+              <Link
                 href="https://www.nefa.org.au/"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                &#8226; North East Forest Alliance
+                &#8226; North East Forest Alliance NEFA
               </Link>
             </ListItem>
             <ListItem>
               <Link
-                href="https://www.gumbaynggirrconservationgroup.org/"
+                href="https://www.ncec.org.au/"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                &#8226; Gumbaynggirr Conservation Group
+                &#8226; North Coast Environment Council NCEC
               </Link>
             </ListItem>
             <ListItem>
               <Link
-                href="https://www.koalapark.org.au/"
+                href="https://www.nature.org.au/"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                &#8226; The Great Koala Park
+                &#8226; Nature Conservation Council of NSW NCC
               </Link>
             </ListItem>
             <ListItem>
               <Link
-                href="https://www.bellingerlandcare.org.au/"
+                href="https://www.bellingen.nsw.gov.au/Your-Council"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                &#8226; Bellingen Landcare
+                &#8226; Bellingen Shire Council BSC
               </Link>
             </ListItem>
+            <ListItem>
+              <Link
+                href="https://npansw.org.au/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                &#8226; National Parks Association NPA
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://forestsandclimate.org.au/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                &#8226; Australian Forests and Climate Alliance AFCA
+              </Link>
+            </ListItem>            
           </List>
         </Text>
       </Container>

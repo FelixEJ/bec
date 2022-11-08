@@ -59,6 +59,27 @@ const Close = styled.span`
   top: 106px;
 `;
 
+const Alert = styled.div`
+  padding: 20px;
+  background-colour: rgb(13, 141, 19);
+  color: white;
+`;
+
+const CloseButton = styled.span`
+  margin-left: 5px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover{
+    color:black;
+  }
+`;
+
 const Contact = () => {
   const [contact, setContact] = useState({
     name: "",
@@ -85,18 +106,33 @@ const Contact = () => {
 
   function sendForm() {
     console.log(contact);
-    emailjs
-      .send("service_d8aeynk", "template_6sjopg6", contact, "lC3qN2NqNa13VitI4")
-      .then(
-        function (response) {
-          console.log("SUCCESS!", response.status, response.text);
-        },
-        function (error) {
-          console.log("FAILED...", error);
-        }
-      );
+    // emailjs
+    //   .send("service_d8aeynk", "template_6sjopg6", contact, "lC3qN2NqNa13VitI4")
+    //   .then(
+    //     function (response) {
+    //       console.log("SUCCESS!", response.status, response.text);
+    //     },
+    //     function (error) {
+    //       console.log("FAILED...", error);
+    //     }
+    //   );
+    showSuccess();
     resetContact();
     handleClose();
+  }
+
+  function showSuccess() {
+    console.log("SUCCESS");
+    return (
+      <Alert>
+        <CloseButton          
+          onclick="this.parentElement.style.display='none';"
+        >
+          &times;
+        </CloseButton>
+        <strong>Success!</strong> Thank you!
+      </Alert>
+    );
   }
 
   function resetContact() {
@@ -182,6 +218,7 @@ const Contact = () => {
                 value={contact.membership}
                 onChange={handleChange}
               >
+                <option value="">--Please select--</option>
                 <option value="waged">Waged $20/year</option>
                 <option value="unwaged">Unwaged $5/year</option>
                 <option value="lifetime">Lifetime supporter $50</option>
@@ -195,12 +232,21 @@ const Contact = () => {
                 value={contact.payment}
                 onChange={handleChange}
               >
+                <option value="">--Please select--</option>
                 <option value="bank">Bank Transfer</option>
                 <option value="square">Square Payment Portal</option>
               </select>
             </Label>
             <Input type="submit" value="Send" />
           </Form>
+          <Alert>
+        <CloseButton          
+          onclick="this.parentElement.style.display='none';"
+        >
+          &times;
+        </CloseButton>
+        <strong>Success!</strong> Thank you!
+      </Alert>
         </Box>
       </Modal>
     </Container>

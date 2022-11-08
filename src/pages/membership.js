@@ -107,6 +107,26 @@ const Icon = styled.img`
   }
 `;
 
+const CloseButton = styled.span`
+  margin-left: 5px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    color: black;
+  }
+`;
+const Alert = styled.div`
+  padding: 20px;
+  background-color: rgb(13, 141, 19);
+  color: white;
+`;
+
 const Membership = () => {
   const [contact, setContact] = useState({
     name: "",
@@ -123,6 +143,8 @@ const Membership = () => {
   // const [open, setOpen] = React.useState(false);
   // const handleOpen = () => setOpen(true);
   // const handleClose = () => setOpen(false);
+
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
     let name = e.target.name;
@@ -144,7 +166,17 @@ const Membership = () => {
         }
       );
     resetContact();
+    toggleSuccessTrue();
     // handleClose();
+  }
+
+  function toggleSuccessTrue() {
+    // console.log("SUCCESS");
+    setSuccess(true);
+  }
+  function toggleSuccessFalse() {
+    // console.log("close");
+    setSuccess(false);
   }
 
   function resetContact() {
@@ -173,14 +205,11 @@ const Membership = () => {
               portal. Our secretary will then verify that the payment was made.
             </p>
             <p>
-              If you are on a fixed income, centrelink or other concession, membership is $5/year.
+              If you are on a fixed income, centrelink or other concession,
+              membership is $5/year.
             </p>
-            <p>
-              Otherwise membership is $20/year.
-            </p>
-            <p>
-              To be a lifetime supporter is a one-time payment of $50.
-            </p>
+            <p>Otherwise membership is $20/year.</p>
+            <p>To be a lifetime supporter is a one-time payment of $50.</p>
             <p>
               <b>Name:</b> Bellingen Environment Centre
               <br />
@@ -274,6 +303,7 @@ const Membership = () => {
                   value={contact.membership}
                   onChange={handleChange}
                 >
+                  <option value="">--Please select--</option>
                   <option value="waged">Waged $20/year</option>
                   <option value="unwaged">Unwaged $5/year</option>
                   <option value="lifetime">Lifetime supporter $50</option>
@@ -287,12 +317,27 @@ const Membership = () => {
                   value={contact.payment}
                   onChange={handleChange}
                 >
+                  <option value="">--Please select--</option>
                   <option value="bank">Bank Transfer</option>
                   <option value="square">Square Payment Portal</option>
                 </select>
               </Label>
               <Input type="submit" value="Send" />
             </Form>
+            {success ? (
+              <Alert>
+                <CloseButton
+                  onClick={() => {
+                    toggleSuccessFalse();
+                  }}
+                >
+                  &times;
+                </CloseButton>
+                <strong>Success!</strong> Thank you!
+              </Alert>
+            ) : (
+              <></>
+            )}
           </TextBox>
         </ParallaxCont>
         <Footer />
