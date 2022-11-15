@@ -144,7 +144,7 @@ const items = [
 
   <Link to="/BlueBerries">
     <SlideContainer className="item" data-value="5">
-      <Title>The Blueberry Campaign</Title>
+      <Title>Intensive Agriculture Campaign/ Blueberries</Title>
       <SliderImage>
         <ProgressiveImage
           src={Slide05}
@@ -153,11 +153,11 @@ const items = [
         />
       </SliderImage>
       <Text>
-        The Bellingen Environment Centre started working on the Blueberry
-        Campaign in 2015 when a local Valery resident notified them of their
-        environmental concerns with a 150 acre blueberry farm on the edge of
-        Pine Creek. The resident had exhausted every avenue to try and protect
-        their local environment...
+        The Bellingen Environment Centre started working on the Intensive
+        Agriculture Campaign in 2015 when a local Valery resident notified them
+        of their environmental concerns with a 150 acre blueberry farm on the
+        edge of Pine Creek. The resident had exhausted every avenue to try and
+        protect their local environment...
       </Text>
     </SlideContainer>
   </Link>,

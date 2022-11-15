@@ -2,10 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import { Parallax } from "react-parallax";
 import "../App.css";
+import ProgressiveImage from "../components/progressiveImage";
 
 import Footer from "../components/footer";
 
 import BgImage01 from "../images/BGone.jpg";
+import Map from "../images/IntensiveAgriculture/map.jpg";
+import Chemicals from "../images/IntensiveAgriculture/chemicals.jpg";
+import Floods from "../images/IntensiveAgriculture/flooded.jpg";
+import MapMini from "../images/IntensiveAgriculture/map_mini.jpg";
+import ChemicalsMini from "../images/IntensiveAgriculture/chemicals_mini.jpg";
+import FloodsMini from "../images/IntensiveAgriculture/flooded_mini.jpg";
 
 const Container = styled.div`
   display: block;
@@ -26,6 +33,12 @@ const Subtitle = styled.h3`
   font-size: 1.2em;
   text-transform: uppercase;
   text-align: center;
+`;
+
+const Image = styled.div`
+  max-width: 100%;
+  display: block;
+  margin: 15px auto;
 `;
 
 const TextBox = styled.div`
@@ -59,16 +72,33 @@ const BlueBerries = () => {
       <Parallax bgImage={BgImage01} strength={-200}>
         <ParallaxCont>
           <TextBox>
-            <Title>The Blueberry Campaign</Title>
+            <Title>Intensive Agriculture Campaign/ Blueberries</Title>
+            <Subtitle>
+              Intensive Plant Agriculture needs Local Government Development
+              Application Approval
+            </Subtitle>
             <p>
-              The Bellingen Environment Centre started working on the Blueberry
-              Campaign in 2015 when a local Valery resident notified them of
-              their environmental concerns with a 150 acre blueberry farm on the
-              edge of Pine Creek. The resident had exhausted every avenue to try
-              and protect their local environment but still nothing serious has
-              been done. Since the campaign began the blueberry farm has now
-              expanded to over 400acres.
+              The Bellingen Environment Centre is concerned about all Intensive
+              Plant Agriculture Operations across our region and in particular,
+              the Bellingen Shire. These crops can use polluting chemicals to
+              our waterways and their water use needs to be carefully regulated.
             </p>
+
+            <p>
+              Early in 2017 the Bellingen Environment Centre (BEC) was alerted
+              to broadscale land clearing at Valery which would pollute Pine
+              Creek. The trees logged were also a part of the Bellingen Shire
+              Koala Management Plan. These trees were cleared to make way for
+              the first Blueberry Farm and later two more farms were established
+              in the Bellingen Shire.
+            </p>
+            <Image>
+              <ProgressiveImage
+                src={Map}
+                placeholderSrc={MapMini}
+                alt="Map of the blueberry farms near Pine Creek"
+              />
+            </Image>
             <p>
               <i>
                 “Within weeks the forest was all cleared, the rows were ploughed
@@ -78,210 +108,59 @@ const BlueBerries = () => {
                 of Pine Creek continued on a massive scale.”
               </i>
             </p>
-            <Subtitle>Residents experience 2017</Subtitle>
             <p>
-              This isn’t just a blueberry problem it’s an industrial farming
-              problem it’s not a Coffs Coast problem it’s a world problem. Soil
-              degradation, land clearing, water shortage and pollution is
-              happening worldwide. Due to over farming our fertile, crop
-              production is dwindling. We need to start making industry changes
-              to help preserve our major life source.
+              Blueberries were proliferating across the Mid North Coast and
+              residents from Coffs Harbour, Grafton and Nambucca Heads concerned
+              about spray drift and water pollution from highly poisonous
+              chemicals attended the first of three meetings in March 2017
+              organised by the BEC in Bellingen. Industry Representatives and
+              farmers from the Blueberry Industry also attended the meetings.
+            </p>
+            <Image>
+              <ProgressiveImage
+                src={Chemicals}
+                placeholderSrc={ChemicalsMini}
+                alt="Toxic and flammable chemicals used in intensive agriculture"
+              />
+            </Image>
+            <p>
+              BEC formed an outreach group in Coffs Harbour in 2018 of active
+              residents called the IPA (Intensive Plant Agriculture” group which
+              was incorporated in 2020. These residents ran a passionate and
+              well evidenced campaign and prepared a broadscale petition across
+              the Coffs Harbour Shire to require any Intensive Agriculture
+              operation to apply for a DA. The motion was voted against by Coffs
+              Harbour Council.
             </p>
             <p>
-              You just have to watch an episode of Landline to see sustainable
-              methods are being adopted throughout farming in Australia. These
-              changes are creating remarkable results with eco systems returning
-              and working with the farm to create better production, lower
-              costs, fertile soil and a less demands on water. In this day and
-              age we have to start adapting the positive science that is
-              transforming the industry and stop using out of date farm methods
-              that have a detrimental effect on our health and natural heritage.
+              A study by Southern Cross University “Investigating Water Quality
+              in Coffs Coastal Estuaries” July 2018 was aware of the damage that
+              chemical runoff from development and Blueberry farming was having
+              on Hearnes Lake and the dying forests surrounding it.
             </p>
-            <Subtitle>The Main Concerns</Subtitle>
+            <Image>
+              <ProgressiveImage
+                src={Floods}
+                placeholderSrc={FloodsMini}
+                alt="Toxic and flammable chemicals used in intensive agriculture"
+              />
+            </Image>
             <p>
-              There are no set of rules that are enforced to make sure farmers
-              are doing right by residents and the environment. The EPA is
-              understaffed and have only been to a handful of farms in the four
-              years residents have been making complaints.
-            </p>
-            <p>
-              A Code of conduct was released from the Australian Blueberry
-              Growers Association this year. It didn’t seriously address the
-              ongoing concerns residents were facing and with no body to enforce
-              the code it really means nothing.
+              It is a testament to our own complacency and the corruption of the
+              NSW Government regulatory systems that Hearnes Lake often
+              described as the lungs of the Solitary Islands is now closed
+              because it is dead from chemical pollution.
             </p>
             <p>
-              Both leading parties plan to expand the industry by 20% each year
-              for export to china. Like normal they are more concerned about the
-              money than its people and We know there are farmers trying to do
-              the right thing but every industry has rules to follow the reason
-              we have rules is to cut out the cowboys that are giving workers a
-              bad name.
+              It is vital that immediate funding is made available to restore
+              Hearne’s Lake and that any new development requires a Local
+              Government DA. The Federal Department of Agriculture should halt
+              the use of poisons banned overseas from the list of chemicals
+              allowed in the growing of any Intensive Plant Agriculture in NSW
+              for the sake of human health and to restore damaged land and
+              waterways.
             </p>
-            <Subtitle>No Protection of our Waterways</Subtitle>
-            <p>
-              Water is such a precious commodity in Australia and around the
-              world today. Blueberries are a very thirsty crop, to keep up the
-              demand farmers have been illegally pumping out of our regions
-              creeks and rivers. They have been building oversized dams which
-              are catching the water before it gets to our natural water way.
-            </p>
-            <p>
-              Farms run off is a great concern as its contaminated with chemical
-              residue and silt erosion due to the direction of the rows they act
-              like gutters which run strait into our creeks rivers and their
-              dams, that eventually over flow into the water ways when the big
-              rains do come. This is putting creeks, rivers and the oceans eco
-              systems at risk.
-            </p>
-            <p>
-              The southern cross university did a yearlong study of Bucca Bucca
-              Creek over 2017 and found nitrate levels 50% to 800% over normal
-              levels downstream from the blueberry farms. If nitrates build up
-              it creates algae bloom taking the oxygen from the water and
-              harming all the life in the water ways. The university had an
-              information session for farmers about the report but sadly it was
-              poorly attended.
-            </p>
-            <p>
-              If farmers directed the rows across the contours of the land, used
-              mulch instead of black plastic, introduced simple nitrate pits or
-              reed beds, used silt catches and sufficient treed buffer zones
-              they could reduce the amount of water needed and significantly
-              reduce their impacts they have on our creeks and rivers.
-            </p>
-            <p>
-              <Link href="http://www.abc.net.au/news/2018-04-08/blueberry-farms-blamed-for-nitrogen-in-creek/9625214">
-                ABC national news coverage of the Bucca Bucca creek report.
-              </Link>
-            </p>
-            <Subtitle>Over use of chemicals</Subtitle>
-            <p>
-              Overspray from the farms end up in our air which ends up in our
-              drinking water, settling on our lawns, clothes, pools, gardens and
-              finally into our precious water systems. If farms had sufficient
-              treed buffer zones and sprayed responcibly it would stop the spray
-              drift landing on resident’s homes.
-            </p>
-            <p>
-              America has put blueberries on the most toxic list due to the high
-              amounts of chemicals that are used in their production. With
-              Australia still using chemicals that have been banned in the UK
-              and America for years due to their cancer-causing properties who
-              knows what our berries are getting sprayed with. Chemical build up
-              in our bodies can lead to a number of health problems.
-            </p>
-            <p>
-              We have so many alternatives to chemicals today it’s a shame more
-              farmers aren’t adopting new proven methods that are less harmful
-              to us and our environment.
-            </p>
-            <Subtitle>Illegal Logging</Subtitle>
-            <p>
-              In some cases there has been no regard for forest zoning. Koala
-              corridors have been clear felled to make way for fields. The trees
-              cut down are used for posts in the bird netting. Clearing the land
-              adds to decline in wildlife, loss of habitat, erosion and silt
-              build up. The fines farmers receive for forest destructions are
-              insignificant compared to the money blueberry farms are making.
-            </p>
-            <p>
-              <i>
-                “Even though there was definite proof of pollution, erosion and
-                illegal land clearing there still is no action with no results.
-                These farmers are uncontrolled doing whatever they wish. There
-                are no rules it seems, the wheels turn so extremely slow by the
-                time there is any action by the relevant authorities it is too
-                late and the damage is done both to the land and wildlife. The
-                issue of pesticide spraying is also now a very urgent issue.”
-              </i>
-            </p>
-            <Subtitle>What the BEC has been doing</Subtitle>
-            <p>
-              In 2017 the BEC held a series of meeting first to hear community
-              concerns. To follow we held an information session to explain up
-              to date alternative methods to replace out of date farming around
-              Coffs Harbour and finally a public awareness meeting to let other
-              people in our community know what is really happening.
-            </p>
-            <p>
-              The executive director of the Blueberry Growers Association was
-              invited to give residents an over view of the Code of Conduct they
-              created and run a Q and A session on the problems in the area.
-              Unfortunately, Alex Smith cancelled due to personal reasons. When
-              the BEC called to reschedule the meeting, he declined as he told
-              us the consultation period was over and all residents have had
-              their chance to voice their opinions at their meetings. This is
-              total rubbish as no resident was invited to any meeting.
-            </p>
-            <p>
-              We also lobbied the Bellingen, Nambucca and Coffs councils urging
-              them to pass DA approval for all intensive horticulture and asked
-              that the DPI guidelines be enforced for all Blueberry farmers.
-            </p>
-            <p>
-              Bellingen council passed a gateway proposal regarding buffer zones
-              and wildlife corridors this was accepted at reginal planning.
-              Unfortunately, The State planning authority knocked it back due to
-              Political decision. Sally Townley and Dominic King are not happy
-              with this result and are now taking the matter to a private body
-              the joint reginal planning panel along with the water report.
-            </p>
-            <p>
-              We are continuing to gather evidence of misconduct and are
-              compiling a report on the industry.
-            </p>
-            <Subtitle>How to help</Subtitle>
-            <p>
-              JOIN YOUR LOCAL facebook GROUP Citizens unite or Bellingen
-              blueberry action group, join Bellingen Environment Centre,
-              Clarence environment centre, Nambucca conservation center North
-              Coast Environment conservation.{" "}
-            </p>
-            <p>
-              Get your creeks and water tanks tested, hold a fundraiser, sign
-              our petition, donate and educate your community.
-            </p>
-            <p>
-              <Link href="https://www.change.org/p/no-blueberry-farm-boambee">
-                Sign this petition
-              </Link>
-            </p>
-            <p>
-              We are calling upon concerned residents to regularly contact state
-              and local government and the media to express their concerns have
-              a standard letter and mailing list that you email once a month or
-              once a week. Listed below are some useful contacts.
-            </p>
-            <p>
-              The Hon Sussan Ley MP Electorate Office Telephone:
-              <Link id="phone" href="tel:+61260213264">
-                (02) 6021 3264
-              </Link>
-              ; Fax:
-              <Link id="phone" href="tel:+61260216620">
-                (02) 6021 6620
-              </Link>{" "}
-            </p>
-            <p>
-              Email <a href="https://sussanley.com/">can be found here</a>
-            </p>
-            <p>Pat Conaghan, National Party of Australia </p>
-            <p>
-              Contact{" "}
-              <Link href="https://patconaghan.com.au/contact/">
-                can be found here
-              </Link>
-            </p>
-            <p>
-              Melinda Pavey Member for Oxley Telephone:
-              <Link id="phone" href="tel:+61265626190">
-                (02) 6562 6190
-              </Link>
-            </p>
-            <p>
-              Email <Link href="oxley@parliment.nsw.gov.au">them here</Link>
-            </p>
+            <p>Caroline Joseph, for the BEC</p>
           </TextBox>
         </ParallaxCont>
         <Footer />

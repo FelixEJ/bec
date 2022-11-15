@@ -57,6 +57,11 @@ const TextBox = styled.div`
   }
 `;
 
+const Link = styled.a`
+  color: #284124;
+  text-decoration: underline;
+`;
+
 const KoalaNationalPark = () => {
   return (
     <Container>
@@ -82,9 +87,9 @@ const KoalaNationalPark = () => {
             <p>
               The first serious local campaign to save koalas was a community
               protest against logging high quality koala habitat in compartments{" "}
-              <a href="http://www.forestrycorporation.com.au/__data/assets/pdf_file/0011/493553/pine-creek-sf-cpt-26-27-harvest-plan-maps.pdf">
-                (Cpts) 26 and 27 in Pine Creek State Forest
-              </a>{" "}
+              <Link href="http://www.forestrycorporation.com.au/__data/assets/pdf_file/0011/493553/pine-creek-sf-cpt-26-27-harvest-plan-maps.pdf">
+                <u>(Cpts) 26 and 27 in Pine Creek State Forest</u>
+              </Link>{" "}
               in 1992. Logging was stopped. and there was much ‘gnashing of
               teeth’ and $100,000’s spent by the then Forestry Commission on
               various studies and ‘koala plans’ until After hundred of thousands
