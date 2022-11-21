@@ -160,7 +160,7 @@ function NavBar() {
                 </MenuItem>
                 <MenuItem onClick={handleClose2}>
                   <Link to="/BlueBerries" className={classes.link}>
-                    The Blueberry Campaign
+                    Intensive Agriculture
                   </Link>
                 </MenuItem>
               </Menu>
