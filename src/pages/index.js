@@ -12,6 +12,8 @@ import Statement from "../components/statement";
 import BgImage01 from "../images/BGone.jpg";
 import BECBanner from "../images/BEC_Banner.jpg";
 import BECBannerMini from "../images/BEC_Banner_mini.jpg";
+import PlantFair from "../images/Plant_Fair_March_2023.jpg";
+import PlantFairMini from "../images/Plant_Fair_March_2023_mini.jpg";
 
 const Container = styled.div`
   text-align: center;
@@ -62,6 +64,12 @@ const MidContainer = styled.div`
   }
 `;
 
+const Link = styled.a`
+  color: #284124;
+  text-decoration: underline;
+  padding: 0 5px;
+`;
+
 const Index = () => {
   return (
     <Container>
@@ -75,13 +83,20 @@ const Index = () => {
           <Slider />
           <HorizButtonBar />
           <MidContainer>
-            <Image>
-              <ProgressiveImage
-                src={BECBanner}
-                placeholderSrc={BECBannerMini}
-                alt="Banner showing endangered quoll with text 'Baalijin - Gumbaynggir Country' #EndNativeForestLogging"
-              />
-            </Image>
+            <Link
+              href="https://bellingenplantfair.org/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <Image>
+                <ProgressiveImage
+                  src={PlantFair}
+                  placeholderSrc={PlantFairMini}
+                  alt="Plant fair March 2023 poster"
+                  // alt="Banner showing endangered quoll with text 'Baalijin - Gumbaynggir Country' #EndNativeForestLogging"
+                />
+              </Image>
+            </Link>
             <Statement />
           </MidContainer>
         </ParallaxCont>
