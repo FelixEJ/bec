@@ -70,6 +70,57 @@ const Link = styled.a`
   padding: 0 5px;
 `;
 
+const Flyer = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  width: 400px;
+  overflow: hidden;
+  background: cream;
+
+  @media only screen and (min-width: 480px) {
+  }
+  @media only screen and (min-width: 768px) {
+  }
+  @media only screen and (min-width: 1024px) {
+  }
+  @media only screen and (min-width: 1600px) {
+  }
+`;
+
+const Text = styled.div`
+  width: 90vw;
+  max-width: 500px;
+  text-align: center;
+  margin: 15px;
+  padding: 15px;
+  background: rgb(14, 120, 8, 0.9);
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+
+  @media only screen and (min-width: 480px) {
+  }
+  @media only screen and (min-width: 768px) {
+    max-width: 300px;
+  }
+  @media only screen and (min-width: 1024px) {
+    max-width: 400px;
+  }
+  @media only screen and (min-width: 1600px) {
+    max-width: 500px;
+  }
+`;
+
+const Subtitle = styled.h3`
+  text-align: center;
+  color: white;
+  font-size: 40px;
+`;
+
 const Index = () => {
   return (
     <Container>
@@ -88,14 +139,23 @@ const Index = () => {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <Image>
+              <Flyer>
+                <Text>
+                  <Subtitle>Autumn Plant Fair</Subtitle>
+                9th March 2024
+                <br/><br/>35th Anniversary
+                <br/><br/>Click HERE for more info
+                <br/>Volunteer enquiries please email bellingenplantfair@gmail.com
+                </Text>
+              </Flyer>
+              {/* <Image>
                 <ProgressiveImage
                   src={PlantFair}
                   placeholderSrc={PlantFairMini}
                   alt="Plant fair March 2023 poster"
                   // alt="Banner showing endangered quoll with text 'Baalijin - Gumbaynggir Country' #EndNativeForestLogging"
                 />
-              </Image>
+              </Image> */}
             </Link>
             <Statement />
           </MidContainer>
