@@ -10,6 +10,7 @@ import HorizButtonBar from "../components/horizButtonBar";
 import Statement from "../components/statement";
 
 import BgImage01 from "../images/BGone.jpg";
+import PlantFairVacancy from "../images/plant_fair_vacancy.jpg"
 import BECBanner from "../images/BEC_Banner.jpg";
 import BECBannerMini from "../images/BEC_Banner_mini.jpg";
 import PlantFair from "../images/Plant_Fair_March_2023.jpg";
@@ -139,7 +140,7 @@ const Index = () => {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <Flyer>
+              {/* <Flyer>
                 <Text>
                   <Subtitle>Autumn Plant Fair</Subtitle>
                 9th March 2024
@@ -147,15 +148,15 @@ const Index = () => {
                 <br/><br/>Click HERE for more info
                 <br/>Volunteer enquiries please email bellingenplantfair@gmail.com
                 </Text>
-              </Flyer>
-              {/* <Image>
+              </Flyer> */}
+              <Image>
                 <ProgressiveImage
-                  src={PlantFair}
+                  src={PlantFairVacancy}
                   placeholderSrc={PlantFairMini}
-                  alt="Plant fair March 2023 poster"
+                  alt="Plant fair coordinator position vacant"
                   // alt="Banner showing endangered quoll with text 'Baalijin - Gumbaynggir Country' #EndNativeForestLogging"
                 />
-              </Image> */}
+              </Image>
             </Link>
             <Statement />
           </MidContainer>
