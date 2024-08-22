@@ -13,8 +13,8 @@ import BgImage01 from "../images/BGone.jpg";
 import PlantFairVacancy from "../images/plant_fair_vacancy.jpg"
 import BECBanner from "../images/BEC_Banner.jpg";
 import BECBannerMini from "../images/BEC_Banner_mini.jpg";
-import PlantFair from "../images/Plant_Fair_March_2023.jpg";
-import PlantFairMini from "../images/Plant_Fair_March_2023_mini.jpg";
+import PlantFair from "../images/PlantFairSpring2024.png";
+import PlantFairMini from "../images/PlantFairSpring2024_mini.jpg";
 
 const Container = styled.div`
   text-align: center;
@@ -151,7 +151,7 @@ const Index = () => {
               </Flyer> */}
               <Image>
                 <ProgressiveImage
-                  src={PlantFairVacancy}
+                  src={PlantFair}
                   placeholderSrc={PlantFairMini}
                   alt="Plant fair coordinator position vacant"
                   // alt="Banner showing endangered quoll with text 'Baalijin - Gumbaynggir Country' #EndNativeForestLogging"
