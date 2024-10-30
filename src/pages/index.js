@@ -151,9 +151,9 @@ const Index = () => {
               </Flyer> */}
               <Image>
                 <ProgressiveImage
-                  src={PlantFair}
-                  placeholderSrc={PlantFairMini}
-                  alt="Plant fair coordinator position vacant"
+                  src={BECBanner}
+                  placeholderSrc={BECBannerMini}
+                  alt="Poster showing native animal in tree with #EndNativeForestLogging"
                   // alt="Banner showing endangered quoll with text 'Baalijin - Gumbaynggir Country' #EndNativeForestLogging"
                 />
               </Image>

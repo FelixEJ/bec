@@ -196,7 +196,11 @@ const Membership = () => {
           <TextBox>
             <Title>Become A Member</Title>
             <p>
-              Online memberships temporarily unavailable.
+              Online memberships temporarily unavailable. Please contact <a
+                href="mailto: bellingenec@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >bellingenec@gmail.com</a> for further information on how to become a member.
             </p>
           </TextBox>
 
